@@ -1,0 +1,332 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+}
+
+a {
+    color: #262626;
+}
+
+.main-nav {   
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0px;
+    font-size: 13px;
+    justify-content: space-between;
+}
+
+.main-nav img {
+    width: 120px;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul.main-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.main-nav ul li {
+    padding: 0px 10px;
+}
+
+.main-nav ul li a {
+    padding-bottom: 2px;
+}
+
+.main-nav ul li a:hover {
+    border-bottom: 2px solid black;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    font-size: 15px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.showcase {
+    width: 100%;
+    height: 400px;
+    background: url("images/hero-image.jpg")
+    no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.showcase h2, .showcase p {
+    margin-bottom: 10px;
+}
+
+.showcase .btn {
+    margin-top: 20px;
+}
+
+.home-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 40px;
+}
+
+.home-cards img {
+    width: 260px;
+    height: 190px;
+    margin-bottom: 20px;
+}
+
+.home-cards h3 {
+    margin-bottom: 5px;
+}
+
+.home-cards a {
+    display: inline-block;
+    padding-top: 10px;
+    color: blue;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.home-cards a:hover i {
+    margin-left: 5px;
+}
+
+.xbox {
+    background-image: url("images/xbox-gamepass-ultimate.png");
+    width: 100%;
+    height: 472px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.xbox .content {
+    width: 40%;
+    padding: 50px 0 0 30px;
+}
+
+.xbox p, .carbon p {
+    margin: 10px 0 20px;
+}
+
+.carbon {
+    background-image: url("images/carbon-negative-for-microsoft.jpeg");
+    width: 100%;
+    height: 472px;
+}
+
+.carbon .content {
+    width: 55%;
+    padding: 100px 0 0 30px;
+}
+
+.dark {
+    color: white;
+}
+
+.dark .btn {
+    background-color: white;
+    color: black;
+}
+
+.follow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 30px 0 30px;
+}
+
+.follow * {
+    margin-right: 10px;
+}
+
+.links {
+    background-color: #f2f2f2;
+    color: black;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.links-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.links-inner ul li {
+    padding: 8px 0;
+}
+
+footer {
+    background-color: #f2f2f2;
+    color: black;
+    font-size: 11px;
+    padding: 20px 0;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer div {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+footer div i {
+    padding-right: 10px;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .footer-inner ul li {
+    margin-right: 24px;
+    margin-bottom: 20px;;
+}
+
+footer .footer-inner ul li:hover {
+    background-color: yellowgreen;
+}
+
+
+
+@media(max-width: 768px) {
+    .menu-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        z-index: 2;
+        display: block;
+    }
+
+    .menu-btn:hover {
+        opacity: 0.7;
+    }
+
+    .main-nav ul.main-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #f2f2f2;
+        width: 50%;
+        height: 100%;
+        transform: translateX(-500px);
+        border-right: 1px solid black;
+        opacity: 0.8;
+        padding: 30px;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .main-nav ul.main-menu.show {
+        transform: translateX(-20px);
+    }
+
+    .main-nav ul.main-menu li {
+        border-bottom: 1px solid red;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .main-nav ul.main-menu li:last-child {
+        border-bottom: none;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .main-nav ul.right-menu {
+        margin-right: 50px;
+    }
+
+    .home-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .xbox .content p {
+        display: none;
+    }
+
+    .xbox .content h2 {
+        margin-bottom: 20px;
+    }
+
+    .carbon .content {
+        width: 85%;
+    }
+
+    .links .links-inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px) {
+    .home-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .links .links-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .links .links-inner ul {
+        margin-bottom: 20px;
+    }
+}
+
+.iframe {
+    display: inline-block;
+}
